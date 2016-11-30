@@ -7,7 +7,7 @@ This chrome extension will read a list of guests who have stayed in
 at this location in the past that created issues for the staff and 
 other guests. While making a new reservation it will read the input 
 in the first and last name input boxes. If the name matches then it
-will alert you saying "(Guest name) is on our not rent list.
+will alert you saying "(Guest name) is on our not rent list."
 
 
 Usage

@@ -1,4 +1,4 @@
-var do_not_rent = [ //list of People who are not allowed to rent rooms 
+var do_not_rent = [ //list of People who are not allowed to rent rooms. Left alligned to make it easier to change through Notepad
 'Justin Robles',
 'John Doe'
 				  ]
