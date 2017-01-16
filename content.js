@@ -1,11 +1,92 @@
 var do_not_rent = [ //list of People who are not allowed to rent rooms. Left alligned to make it easier to change through Notepad
-'Justin Robles',
-'John Doe'
+'Virginia Bishop',
+'Randy Blanchette',
+'Geoffrey Blaskey',
+'Jason Bolt',
+'Christopher Bowden',
+'Jason Briese',
+'William Campbell',
+'Seth Comstock',
+'Nickie Connolley',
+'Eady James Costello',
+'Eady Costello',
+'James Costello',
+'Heather Crenshaw',
+'Gabriel Robles Ellis',
+'Gabriel Ellis',
+'Gabriel Robles',
+'Chad Enos',
+'Taniqua Boe Essman',
+'Taniqua Essman',
+'Taniqua Boe',
+'Victor Ferguson',
+'Josh Garnett',
+'Jason Garza',
+'Charlene Hallstrom',
+'Robert Harp',
+'Tiffany Harrison',
+'Aleah Harvy',
+'Aleah Harney',
+'Rachel Hasselhun',
+'Jana Marie Hodgins',
+'Jana Hodgins',
+'Jana Marie',
+'Erica Hunsinger',
+'Raymond Jay Jemison',
+'Raymond Jay',
+'Raymond Jemison',
+'Katherin Johnson',
+'Nikkole Kau',
+'Katy Kennedy',
+'Jennifer Leslie',
+'Linda Lilly',
+'Theresa Lloyd',
+'Pat McLaughlin',
+'José Mendoza',
+'Jose Mendoza',
+'Brittany Mitchell',
+'Jazmini Vargas Montes',
+'Jazmini Montes',
+'Jazmini Vargas',
+'Christina Morris',
+'Tracy Motelewski',
+'Joseph Nesbitt',
+'Antron Phillips',
+'Tarren Marie Quest',
+'Tarren Marie',
+'Tarren Quest',
+'Thomas Rappe',
+"Jena Ray",
+"Ardis Rivers",
+"Brenda Ruiz",
+"Kevin Saavedra",
+"Santin Sandoval",
+"Justin Saylor",
+"Corinne Scott",
+"Trevor Sims",
+"Judson Patrick Smith",
+"Judson Smith",
+"Patrick Smith",
+"Todd Smith",
+"Zachary Spence",
+"Sheldon Stark",
+"Pamela Thompson",
+"Robert Thompson",
+"Charlene Toler",
+"Art Toler",
+"Mark Ukolov",
+"Scott Waldorf",
+"Joana Wallace",
+"Hunny White",
+"Andrew White"
 				  ]
 
-// This calls the function when you have finished entering the names and click the address
-// box.
-document.getElementsByName('homeAddressOne')[0].onclick = verifyGuest;
+var lowerDNR = function(x){ 
+  return x.toLowerCase();
+};
+do_not_rent = do_not_rent.map(lowerDNR);
+
+document.getElementsByName('homeAddressOne')[0].onclick = getFirstLast;
 
 // Event listener for keyup
 function checkTabPress(e) {
@@ -14,32 +95,41 @@ function checkTabPress(e) {
     // pick passed event of global event object
     e = e || event;
     if (e.keyCode == 9)
-        verifyGuest();
+        getFirstLast();
 }
 
 var body = document.querySelector('body');
 body.addEventListener('keyup', checkTabPress);
 
-function verifyGuest(){ 
+function getFirstLast() {
 	// Function will take value from the First and Last name input box and 
 	// check it with the do_not_rent array
 	var first = document.getElementsByName("firstName")[0].value;
 	var last = document.getElementsByName("lastName")[0].value;
-	var whole_name = first.toLowerCase() + " " + last.toLowerCase();
-	for(i = 0; i < do_not_rent.length; i++){ 
-		if(whole_name == do_not_rent[i].toLowerCase()){ 
-			alert(do_not_rent[i] + " is on our do not rent list");
-			return
-		}
+	var wholeName = first.toLowerCase() + " " + last.toLowerCase();
+	if (do_not_rent.includes(wholeName))
+		alert(wholeName + " is on our do not rent list")
+}
 
-	}
+function verify() {
+	half = do_not_rent.length 
 }
 
 function verifyArrivals(){
-	//FIXME: This function will check the skytouch arrival page for anyone on the do not rent list
-	// 		 that booked a room online
+	// Function will be called if the user is viewing the arrivals list
+	idName = "arrivalListCell";
+	count = 0;
+	do {
+		currentName = document.getElementById(idName + count);
+		
+	}
+	while(document.getElementById(idName + count)){
+		console.log(document.getElementById(idName + count).innerText)
+		count++
+	}
+
 }
 
-	//FIXME: Make an easier way for the user to input names rather then having them add to the do_not_rent array.
-	//		 Editing the code may be intimidating to some people
-	//IDEAS: An extension webpage that can add and delete names with a simple input box and add button
+function verifyInHouse(){
+
+}

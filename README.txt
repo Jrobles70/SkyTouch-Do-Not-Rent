@@ -47,33 +47,39 @@ and click more apps to find it.
 I have added the list to the very top of the code. You should see var do_not_rent = [
 followed by a list of names.
 
-3. Go to the very last name in the list and add a comma at the end ,
+3. Go to the first name and start a new line after it (press enter)
 
-4. Start a new line 
+4. Write in the new name with either '' or "" followed by a comma
 
-5. Write in the new name with either '' or "" there is no need to start another new line after
+5. Go to file on the top left and press save or hold down control and press the 's' key
 
-6. Go to file save or press control and the S key
-
-7. Lastly you will need to visit chrome://extensions/ on chrome and hit the Reload (Ctrl+R) option
+6. Lastly you will need to visit chrome://extensions/ on chrome and hit the Reload (Ctrl+R) option next to our extention Do Not Rent
 
 
 
 EXAMPLE:
-this is how it will look when you open notepad
+this is a mock up of how it will look when you open content.js in notepad
+
 var do_not_rent = [
-'Justin Robles'
+'Justin Robles',
+"John Doe",
+"Mickey Mouse"
 				  ]
 
 STEP 3:
 var do_not_rent = [
 'Justin Robles',
+
+"John Doe",
+"Mickey Mouse"
 				  ]
 
-STEP 4 and 5
+STEP 4
 var do_not_rent = [
 'Justin Robles',
-'John Doe'
+'donald duck',
+"John Doe",
+"Mickey Mouse"
 				  ]
 
 

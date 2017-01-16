@@ -8,7 +8,9 @@
 "content_scripts": [
   {
     "matches": [
-      "https://www.skytouchhos.com/pms/ReserveRoom.do"
+      "https://www.skytouchhos.com/pms/ReserveRoom.do",
+      "https://www.skytouchhos.com/pms/ViewArrivalsList.do",
+      "https://www.skytouchhos.com/pms/ViewArrivalsList.init"
     ],
     "js": ["content.js", "jquery-3.1.1.js"]
   }
