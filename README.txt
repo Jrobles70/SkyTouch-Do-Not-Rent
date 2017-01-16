@@ -101,7 +101,9 @@ you save this folder locally. Here are a few simple steps to get you started.
 
 5. Last you will want to make sure the "Enabled" box by "Do Not Rent" is checked
 
-
+Updates
+-------
+I am currently looking up and testing what is the best way to compare two potentially long arrays
 
 Questions or Suggestions?
 -------------------------
